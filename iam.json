@@ -8,7 +8,7 @@
         "type": "amazon-ebs",
         "region": "us-east-2",
         "source_ami": "ami-097a2df4ac947655f",
-        "instance_type": "{{user 'instace_type'}}",
+        "instance_type": "{{user 'instance_type'}}",
         "ssh_username": "{{user 'username'}}",
         "ami_name": "Apache_IAM-{{timestamp}}"
       }
