@@ -16,7 +16,7 @@
         "type": "shell",
         "inline": [ 
             "sudo apt update",
-            "sudo apt install apache -y",
+            "sudo apt install apache2 -y",
             "sudo apt install strees -y"
         ]
       }
