@@ -1,0 +1,27 @@
+{
+    "variables": {
+        "instance_type": "t2.micro",
+        "username": "ubuntu"
+        },
+    "builders": [
+      {
+        "type": "amazon-ebs",
+        "region": "us-east-2",
+        "source_ami": "ami-097a2df4ac947655f",
+        "instance_type": "{{user 'instace_type'}}",
+        "ssh_username": "{{user 'username'}}",
+        "ami_name": "Apache_IAM-{{timestamp}}"
+      }
+    ],
+
+    "provisioners": [
+      {
+        "type": "shell",
+        "inline": [ 
+            "sudo apt update",
+            "sudo apt install apache -y",
+            "sudo apt install strees -y"
+        ]
+      }
+    ]
+}
